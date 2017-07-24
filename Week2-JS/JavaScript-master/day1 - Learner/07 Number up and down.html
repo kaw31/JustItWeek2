@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<p>Enter number below</p>
+<form>
+<input type="number" id="input1"/>
+
+</form>
+<div><button id="button1">Submit</button></div>
+<div id="output1"></div>
+<div id="output2"></div>
+
+<script>
+ 
+    var myButton = document.getElementById("button1");
+    myButton.addEventListener("click", myFirst, false);
+    
+    function myFirst() {
+    var userInput1 = parseInt(document.getElementById("input1").value);
+
+        
+        document.getElementById("output1").innerHTML = userInput1+1;
+        document.getElementById("output2").innerHTML = userInput1-1;
+    }
+      
+</script>
+
+</body>
+</html>
