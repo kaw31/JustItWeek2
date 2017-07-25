@@ -10,11 +10,29 @@
 <h2>Local and global variables</h2>
 <p>a = 5</p>
 
-<span id="globalvar"></span><br /><br />
 <span id="localvar"></span><br /><br />
+<span id="globalvar"></span><br /><br />
 
 <script>
+    
+//    LOCAL VAR
+    
+    function myFunction() {
+    var b = "Local variable b = 20";
+    document.getElementById("localvar").innerHTML = b;
+} 
+    
+    myFunction();
 
+    
+    
+
+    
+//    GLOBAL VAR
+    
+    var b = "Global variable b = 10";
+    
+    document.getElementById("globalvar").innerHTML = b;
 		
 </script>
 
