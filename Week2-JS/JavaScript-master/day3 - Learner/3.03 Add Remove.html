@@ -17,13 +17,32 @@
 <!--  remove the first element of the array -->
 <input type="button" value="Shift member from array" onclick="firstshift()" />
 <!--  add to the first element of the array -->
-<input type="button" value="Shift member from array" onclick="firstunshift(lab22input.value)" />
+<input type="button" value="Unshift member from array" onclick="firstunshift(lab22input.value)" />
 
 <p id="lab22result"></p>
 <p id="lab22result"></p>
 	
 <script>
 
+    var array = [];
+    
+    function lab22push(a) {
+        array.push(a);     
+        document.getElementById("lab22result").innerHTML = array;
+        }
+    function lastpop(b) {
+        array.pop(b);    
+        document.getElementById("lab22result").innerHTML = array;
+        }
+    function firstshift(c) {
+        array.shift(c);   
+        document.getElementById("lab22result").innerHTML = array;
+        }
+    function firstunshift(d) {
+        array.unshift(d);   
+        document.getElementById("lab22result").innerHTML = array;
+        }
+    
 </script>
 
 </body>

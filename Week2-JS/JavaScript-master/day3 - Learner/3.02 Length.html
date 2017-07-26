@@ -15,7 +15,17 @@
 <p id="lengthcounter"></p>
 	
 <script>
-       
+
+    var array = [];
+    function addtoarray(a) {
+    
+    array.push(a);
+        
+    document.getElementById("result").innerHTML = array;
+    document.getElementById("lengthcounter").innerHTML = array.length;
+    
+    }
+    
 </script>
 	
 </body>
