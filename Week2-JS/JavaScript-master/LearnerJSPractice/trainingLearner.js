@@ -86,12 +86,68 @@
 
 /*===== SELF INVOKED FUNCTIONS ======*/
 
-var a = 10;
+//var a = 10;
+//
+//(function() {
+//    
+//    a = a * 2;
+//    a = a + 3;
+//})();
+//
+//console.log(a);
 
-(function() {
+
+/*===== OBJECT CONSTRUCTOR ======*/
+
+//function Student(first, last, age, sLoan) {
+//    
+//    this.firstName = first;
+//    this.lastName = last;
+//    this.age = age;
+//    this.studentLoan = sLoan;
+//    this.fullName = 
+//    function(firstName, lastName) {
+//        return this.firstName + " " + this.lastName;
+//    }
+//    
+//}
+//
+//
+//var rob = new Student("Rob", "Smith", 21, true);
+//
+//console.log(rob);
+//console.log(rob.age);
+//console.log(rob.fullName());
+//
+//var naga = new Student("Naga", "Buffon", 18, false);
+//
+//console.log(naga);
+//console.log(naga.age);
+//console.log(naga.fullName());
+
+
+/*===== JS PROTOTYPE ======*/
+
+function Student(first, last, age, sLoan) {
     
-    a = a * 2;
-    a = a + 3;
-})();
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.studentLoan = sLoan;
+//    this.fullName = 
+//    function(firstName, lastName) {
+//        return this.firstName + " " + this.lastName;
+//    }
+//    
+}
 
-console.log(a);
+Student.prototype.fullName = function() {
+    return this. firstName + " " + this.lastName;
+}
+
+var rob = new Student("Rob", "Smith", 21, true);
+
+var naga = new Student("Naga", "Buffon", 18, false);
+
+console.log(rob.fullName());
+console.log(rob);

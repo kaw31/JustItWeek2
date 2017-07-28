@@ -1,0 +1,30 @@
+#container {
+    background-color: blue;
+    text-align: center;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: white;
+    margin: 30px;
+}
+
+.answers {
+    color: lightblue;
+    background-color: black;
+    width: 30%;
+    margin: 10px auto;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.answers:hover {
+    background-color: gray;
+    color: white;
+}
+
+button {
+    margin: 20px;
+    padding: 10px;
+    cursor: pointer;
+}

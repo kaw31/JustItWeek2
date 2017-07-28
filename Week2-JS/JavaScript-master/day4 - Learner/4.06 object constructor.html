@@ -8,6 +8,29 @@
 
 <script>
 
+    function Student(first, last, age, sLoan) {
+    
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.studentLoan = sLoan;
+    this.fullName = 
+    function(firstName, lastName) {
+        return this.firstName + " " + this.lastName;
+    }
+    
+}
+
+
+var rob = new Student("Rob", "Smith", 21, true);
+
+document.getElementById("demo").innerHTML = rob.fullName();
+
+var naga = new Student("Naga", "Buffon", 18, false);
+
+document.getElementById("demo2").innerHTML = naga.fullName();
+    
+
 
 </script>
 

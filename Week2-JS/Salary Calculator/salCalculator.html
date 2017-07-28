@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Salary Calculator</title>
+    <link rel="stylesheet" href="salCalculator.css">
+
+    </head>
+
+    <body>
+<h1>Salary Calculator</h1>
+    
+    <p class="instruction">Input your annual salary to calculate the tax!</p>
+
+    <input type="text" id="userSalary"><br>
+    <br>
+    <input id="myButton" type="button" value="Calculate" onclick="myFunction()">
+    <br>
+        
+        <table>
+          <tr>
+            <th>Gross Salary:</th>
+            <td id="gross"></td>
+          </tr>
+          <tr>
+            <th>Tax Free Allowance:</th>
+            <td id="taxFree"></td>
+          </tr>
+        <tr>
+            <th>Tax at 20%:</th>
+            <td id="tax20"></td>
+          </tr>
+            <tr>
+            <th>Tax at 40%:</th>
+            <td id="tax40"></td>
+          </tr>
+            <tr>
+            <th>Tax at 45%:</th>
+            <td id="tax45"></td>
+          </tr>
+            <tr>
+            <th>Net Salary:</th>
+            <td id="net"></td>
+            </tr>
+   
+  
+</table>
+  
+<script>
+    
+    
+    
+    function myFunction() {
+        
+        var sal = document.getElementById("userSalary").value;
+        var taxFr = 11500;
+        
+        
+        if (sal <= taxFr) {
+            document.getElementById("gross").innerHTML = "£" + sal;
+            document.getElementById("taxFree").innerHTML = "£" + taxFr;
+            document.getElementById("tax20").innerHTML = "No Tax";
+            document.getElementById("tax40").innerHTML = "No Tax";
+            document.getElementById("tax45").innerHTML = "No Tax";
+            document.getElementById("net").innerHTML = "£" + sal;
+        }
+        
+        else if (sal > taxFr  &&  sal <= 45000) {
+            document.getElementById("gross").innerHTML = "£" + sal;
+            document.getElementById("taxFree").innerHTML = "£" + taxFr;
+            document.getElementById("tax20").innerHTML = "£" + parseInt((sal - taxFr) * 0.2);
+            document.getElementById("tax40").innerHTML = "Does not apply";
+            document.getElementById("tax45").innerHTML = "Does not apply";
+            document.getElementById("net").innerHTML = "£" + parseInt(sal - (sal - taxFr) * 0.2);
+        }
+        
+        else if (sal > 45000  &&  sal <= 123000) {
+            document.getElementById("gross").innerHTML = "£" + sal;
+            document.getElementById("taxFree").innerHTML = "£" + taxFr;
+            document.getElementById("tax20").innerHTML = "Does not apply";
+            document.getElementById("tax40").innerHTML = "£" + parseInt((sal - taxFr) * 0.4);
+            document.getElementById("tax45").innerHTML = "Does not apply";
+            document.getElementById("net").innerHTML = "£" + parseInt(sal - (sal - taxFr) * 0.4);
+        }
+        
+        else if (sal > 123000  &&  sal <= 150000) {
+            document.getElementById("gross").innerHTML = "£" + sal;
+            document.getElementById("taxFree").innerHTML = "No Tax Free allowance";
+            document.getElementById("tax20").innerHTML = "Does not apply";
+            document.getElementById("tax40").innerHTML = "£" + parseInt(sal * 0.4);
+            document.getElementById("tax45").innerHTML = "Does not apply";
+            document.getElementById("net").innerHTML = "£" + parseInt(sal - (sal * 0.4));
+        }
+        
+         else if (sal > 150000) {
+            document.getElementById("gross").innerHTML = "£" + sal;
+            document.getElementById("taxFree").innerHTML = "No Tax Free allowance";
+            document.getElementById("tax20").innerHTML = "Does not apply";
+            document.getElementById("tax40").innerHTML = "Does not apply";
+            document.getElementById("tax45").innerHTML = "£" + parseInt(sal * 0.45);
+            document.getElementById("net").innerHTML = "£" + parseInt(sal - (sal * 0.45));
+        } 
+        
+        
+    }
+
+
+    
+        </script>
+        
+        
+
+        
+ 
+
+
+
+</body>
+</html>
